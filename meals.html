@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EatWell Meal Plans</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4fff6;
+margin:0;
+padding:0;
+}
+
+/* HEADER */
+
+.header{
+background:linear-gradient(120deg,#2ecc71,#27ae60);
+color:white;
+text-align:center;
+padding:30px;
+font-size:28px;
+font-weight:bold;
+}
+
+/* GRID */
+
+.meal-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+padding:40px;
+}
+
+/* MEAL CARD */
+
+.meal-card{
+background:white;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+overflow:hidden;
+transition:0.3s;
+}
+
+.meal-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* IMAGE */
+
+.meal-img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+/* CONTENT */
+
+.meal-content{
+padding:20px;
+}
+
+.meal-content h3{
+color:#27ae60;
+margin-bottom:10px;
+}
+
+.icon{
+font-size:20px;
+animation:bounce 2s infinite;
+}
+
+/* CALORIES */
+
+.calories{
+color:#e74c3c;
+font-weight:bold;
+margin-top:8px;
+}
+
+/* NUTRITION */
+
+.nutrition{
+font-size:14px;
+margin-top:10px;
+}
+
+/* BUTTON */
+
+.select-btn{
+margin-top:10px;
+background:#2ecc71;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.select-btn:hover{
+background:#27ae60;
+}
+
+/* SELECTED MEALS */
+
+.planner{
+background:white;
+padding:20px;
+margin:30px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+@keyframes bounce{
+0%{transform:translateY(0)}
+50%{transform:translateY(-5px)}
+100%{transform:translateY(0)}
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="header">
+🥗 EatWell Weekly Meal Planner
+</div>
+
+
+<div class="meal-grid">
+
+<!-- MONDAY -->
+
+<div class="meal-card">
+
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="meal-img">
+
+<div class="meal-content">
+
+<h3>Monday <span class="icon">🍎</span></h3>
+
+<p>Breakfast: Oatmeal + Banana</p>
+<p>Lunch: Chicken Salad</p>
+<p>Dinner: Brown Rice + Veggies</p>
+
+<p class="calories">🔥 1800 kcal</p>
+
+<div class="nutrition">
+Protein: 90g<br>
+Carbs: 210g<br>
+Fat: 55g
+</div>
+
+<button class="select-btn" onclick="selectMeal('Monday')">Add to Planner</button>
+
+</div>
+</div>
+
+
+<!-- TUESDAY -->
+
+<div class="meal-card">
+
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="meal-img">
+
+<div class="meal-content">
+
+<h3>Tuesday <span class="icon">🥑</span></h3>
+
+<p>Breakfast: Avocado Toast</p>
+<p>Lunch: Quinoa Bowl</p>
+<p>Dinner: Salmon + Sweet Potato</p>
+
+<p class="calories">🔥 1950 kcal</p>
+
+<div class="nutrition">
+Protein: 100g<br>
+Carbs: 200g<br>
+Fat: 60g
+</div>
+
+<button class="select-btn" onclick="selectMeal('Tuesday')">Add to Planner</button>
+
+</div>
+</div>
+
+
+<!-- WEDNESDAY -->
+
+<div class="meal-card">
+
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="meal-img">
+
+<div class="meal-content">
+
+<h3>Wednesday <span class="icon">🍓</span></h3>
+
+<p>Breakfast: Yogurt + Berries</p>
+<p>Lunch: Turkey Sandwich</p>
+<p>Dinner: Veggie Stir Fry</p>
+
+<p class="calories">🔥 1750 kcal</p>
+
+<div class="nutrition">
+Protein: 85g<br>
+Carbs: 220g<br>
+Fat: 50g
+</div>
+
+<button class="select-btn" onclick="selectMeal('Wednesday')">Add to Planner</button>
+
+</div>
+</div>
+
+</div>
+<!-- THURSDAY -->
+
+<div class="meal-card">
+
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="meal-img">
+
+<div class="meal-content">
+
+<h3>Thursday <span class="icon">🥗</span></h3>
+
+<p>Breakfast: Smoothie Bowl</p>
+<p>Lunch: Grilled Chicken Wrap</p>
+<p>Dinner: Lentil Soup + Salad</p>
+
+<p class="calories">🔥 1850 kcal</p>
+
+<div class="nutrition">
+Protein: 95g<br>
+Carbs: 215g<br>
+Fat: 52g
+</div>
+
+<button class="select-btn" onclick="selectMeal('Thursday')">Add to Planner</button>
+
+</div>
+</div>
+
+
+
+<!-- FRIDAY -->
+
+<div class="meal-card">
+
+<img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f" class="meal-img">
+
+<div class="meal-content">
+
+<h3>Friday <span class="icon">🍳</span></h3>
+
+<p>Breakfast: Eggs + Whole Wheat Toast</p>
+<p>Lunch: Tuna Salad</p>
+<p>Dinner: Chicken + Quinoa</p>
+
+<p class="calories">🔥 1900 kcal</p>
+
+<div class="nutrition">
+Protein: 105g<br>
+Carbs: 200g<br>
+Fat: 58g
+</div>
+
+<button class="select-btn" onclick="selectMeal('Friday')">Add to Planner</button>
+
+</div>
+</div>
+
+
+
+<!-- SATURDAY -->
+
+<div class="meal-card">
+
+<img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543" class="meal-img">
+
+<div class="meal-content">
+
+<h3>Saturday <span class="icon">🍍</span></h3>
+
+<p>Breakfast: Pancakes + Fruit</p>
+<p>Lunch: Veggie Wrap</p>
+<p>Dinner: Grilled Fish + Rice</p>
+
+<p class="calories">🔥 2000 kcal</p>
+
+<div class="nutrition">
+Protein: 98g<br>
+Carbs: 230g<br>
+Fat: 60g
+</div>
+
+<button class="select-btn" onclick="selectMeal('Saturday')">Add to Planner</button>
+
+</div>
+</div>
+
+
+
+<!-- SUNDAY -->
+
+<div class="meal-card">
+
+<img src="https://images.unsplash.com/photo-1478147427282-58a87a120781" class="meal-img">
+
+<div class="meal-content">
+
+<h3>Sunday <span class="icon">🥞</span></h3>
+
+<p>Breakfast: French Toast + Fruit</p>
+<p>Lunch: Chicken Caesar Salad</p>
+<p>Dinner: Veggie Pasta</p>
+
+<p class="calories">🔥 1950 kcal</p>
+
+<div class="nutrition">
+Protein: 92g<br>
+Carbs: 225g<br>
+Fat: 57g
+</div>
+
+<button class="select-btn" onclick="selectMeal('Sunday')">Add to Planner</button>
+
+</div>
+</div>
+
+<!-- USER PLANNER -->
+
+<div class="planner">
+
+<h2>📱 Your Meal Plan</h2>
+
+<ul id="plannerList"></ul>
+
+</div>
+
+
+<script>
+
+function selectMeal(day){
+
+let list=document.getElementById("plannerList")
+
+let li=document.createElement("li")
+
+li.innerText=day+" meal plan added"
+
+list.appendChild(li)
+
+}
+
+</script>
+
+</body>
+</html>
